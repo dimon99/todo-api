@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="/static/homeStyle.css" type="text/css">
+{% extends "homelayout.html" %}
+
+{% block body %}
+<script>
+function DoSubmit(action){
+  document.tasks.action.value = action;
+  return true;
+}
+</script>
+</head>
+<body>
+
+<div class="titlebar">
+    <div class="page-width">
+        <a name="name" class="absolute_pos">Notebook</a>
+
+            <a><img class="usr_logo" src="http://www.gravatar.com/avatar/9afb5ec04debd4173dab309ecd9081d3?d=monsterid&s=%d?d=mm&s=32"></a>
+            <a class="login"> {{ login }}</a>
+            <a class="linked" href="{{"http://192.168.1.13:88/logout" }}"> logout </a>
+            </div>
+
+
+    <!-- <p>{{ tasks }} links</p>-->
+</div>
+<div class="own_page_info">
+    {{ pagination.info }}
+</div>
+
+<div class="pagination-top">
+    {{ pagination.links }}
+</div>
+<table>
+    <tr>
+        <th>Num</th>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Select</th>
+    </tr>
+{% set counter = 1 -%}
+{% for t  in tasks -%}
+<tr>
+  <form method="post" name="tasks" action="">
+     <td>{{ counter + (page - 1) * pagination.per_page }}</td>
+     <td align="center"><a href="{{ t['uri'] }}">{{ t['title'] }} </a></td>
+     <td align="center">{{ t['description'] }}</td>
+     <td align="center">{{ t['status'] }}</td>
+     <td><input  type="checkbox" name="check" class="checkboxes" value="{{ t['id'] }}" /></td>
+{% set counter = counter + 1 -%}
+{% endfor -%}
+<input name='action' value="" hidden>
+<div style="padding: 10px 0;">
+    <input type="submit" value="Delete" class="button" onclick="DoSubmit('Delete')">
+    <input type="submit" value="Update" class="button" onclick="DoSubmit('Update')">
+    <div style="clear: both"></div>
+</div>
+
+    </form>
+</tr>
+</table>
+<div class="pagination-bot">
+{{ pagination.links }}
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,140 @@
+header{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+footer{
+    position: fixed;
+    left: 8px;
+    height: 30px;
+    width: 1567px;
+    color: white;
+    bottom: 0px;
+    background-color: black;
+    clear: left;
+}
+.name header{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    clear: right;
+    background-color: black;
+}
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td,th {
+    border: 1px solid #30799B;
+    text-align: center;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.button {
+    float: right;
+    padding-left: 62px;
+    padding-right: 58px;
+}
+.checkboxes input{
+    padding-right: 20px;
+}
+.user_info form{
+    float: right;
+}
+
+.titlebar div {
+    background-color: black;
+    color: white;
+    height: 36px;
+}
+.usr_logo{
+    position: relative;
+    right: 214px;
+    top: 2px;
+    float: right;
+}
+a.login{
+    text-align: right;
+    position: absolute;
+    right: 158px;
+    top: 17px;
+}
+a.linked{
+    text-align: right;
+    color: #fff;
+    float: right;
+    position: relative;
+    top: 9px;
+    right: 46px;
+}
+
+a:link{
+    color: green;
+}
+a:active{
+    color: #2b669a;
+}
+
+
+.absolute_pos {
+    position: absolute;
+    top: 17px;
+    left: 32px;
+}
+
+
+.pagination-top {
+    position: relative;
+    min-height: 35px;
+    max-width: 292px;
+    margin: 0 auto;
+}
+
+.pagination-bot {
+    position: relative;
+    min-height: 35px;
+    max-width: 292px;
+    margin: 0 auto;
+}
+
+.pagination-page-info {
+    padding: .6em;
+    padding-left: 0;
+    width: 40em;
+    margin: .5em;
+    margin-left: 0;
+    font-size: 12px;
+    padding-left: 820px;
+}
+
+.pagination-page-info b {
+    color: black;
+    background: #6aa6ed;
+    padding-left: 2px;
+    padding: .1em .25em;
+    font-size: 150%;
+}
+
+
+div.pagination li {display: inline;}
+
+div.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+div.pagination li.active a {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table{
+    table-layout: fixed;
+}
